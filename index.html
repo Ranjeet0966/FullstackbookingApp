@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin-top: 40px;
+      }
+      .delete {
+        float: right;
+      }
+    </style>
+    <title>Booking app</title>
+  </head>
+  <body class="bg-body-secondary">
+    <div class="container col-lg-6 offset-lg-3 bg-body-secondary">
+      <form action="/add-user" method="post" id="form" novalidate>
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="enter name"
+          required
+        />
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="enter email"
+          required
+        />
+        <label for="number" class="form-label">Number</label>
+        <input
+          type="tel"
+          class="form-control"
+          id="number"
+          name="number"
+          placeholder="enter mobile number"
+          required
+        />
+        <label for="tfc" class="form-label">Time for call</label>
+        <div class="input-group">
+          <input
+            type="date"
+            name="tfc"
+            id="date"
+            class="form-control"
+            required
+          />
+          <input
+            type="time"
+            name="tfc"
+            id="time"
+            class="form-control"
+            required
+          />
+        </div>
+        <input type="hidden" name="id" value="" id="userid" />
+        <br />
+        <button class="btn btn-primary" id="submit" type="submit">
+          submit
+        </button>
+      </form>
+      <br />
+      <div class="list-group" id="list"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
